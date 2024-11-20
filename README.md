@@ -16,8 +16,12 @@ This project simulates three types of automata:
 - PDA: Simulates a PDA that accepts strings defined by the language **L = aab\*aba\*ab**.
 
 ## Requirements
-No requirments to run the executable.
+Runs in Windows and OSx environments. No other installation required.
 
 ## How to Run
-Just run the executable file.
+Just run the executable file provided. You can also locate the file in this location:
+For Win x64:
+\Project\AutomatonImplementation\AutomatonSimulator\bin\Release\net8.0\win-x64\publish
 
+For OS x64:
+\Project\AutomatonImplementation\AutomatonSimulator\bin\Release\net8.0\osx-x64\publish

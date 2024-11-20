@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "xjiejpuBeJs=",
+  "dgSpecHash": "Q/4OgmfplMk=",
   "success": true,
   "projectFilePath": "C:\\Users\\Ritvik Tiwari\\Desktop\\Harrisburg Institute of Technology\\Sem 2 Fall 2024\\CISC 603-51-B- Theroy of Computation\\Project\\AutomatonImplementation\\AutomatonSimulator\\AutomatonSimulator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ritvik Tiwari\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.11\\microsoft.net.illink.tasks.8.0.11.nupkg.sha512",
-    "C:\\Users\\Ritvik Tiwari\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.11\\microsoft.netcore.app.runtime.win-x64.8.0.11.nupkg.sha512",
-    "C:\\Users\\Ritvik Tiwari\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.11\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.11.nupkg.sha512",
-    "C:\\Users\\Ritvik Tiwari\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.11\\microsoft.aspnetcore.app.runtime.win-x64.8.0.11.nupkg.sha512"
+    "C:\\Users\\Ritvik Tiwari\\.nuget\\packages\\microsoft.netcore.app.runtime.osx-x64\\8.0.11\\microsoft.netcore.app.runtime.osx-x64.8.0.11.nupkg.sha512",
+    "C:\\Users\\Ritvik Tiwari\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.osx-x64\\8.0.11\\microsoft.aspnetcore.app.runtime.osx-x64.8.0.11.nupkg.sha512",
+    "C:\\Users\\Ritvik Tiwari\\.nuget\\packages\\microsoft.netcore.app.host.osx-x64\\8.0.11\\microsoft.netcore.app.host.osx-x64.8.0.11.nupkg.sha512"
   ],
   "logs": []
 }
