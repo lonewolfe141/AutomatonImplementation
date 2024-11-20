@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Written and Developed by Ritvik Tiwari. Copyright© 2024 Ritvik Tiwari. All rights reserved.
+using System;
 using System.Collections.Generic;
 
 namespace AutomatonSimulator
@@ -35,7 +36,6 @@ namespace AutomatonSimulator
             currentState = "q0";
             foreach (char symbol in input)
             {
-                //char normalizedSymbol = char.ToUpper(symbol);
                 if (!transitions.ContainsKey((currentState, symbol)))
                 {
                     currentState = "qReject";
@@ -168,12 +168,14 @@ namespace AutomatonSimulator
         {
             while (true)
             {
-                Console.WriteLine("\n=== Automaton Simulator ===");
-                Console.WriteLine("1. Test DFA (Four A's followed by odd B's)");
-                Console.WriteLine("2. Test NFA (Strings either ending with 'ab' or starting with 'ab' and have at least 4 characters in it)");
-                Console.WriteLine("3. Test PDA (L = aab*aba*ab)");
-                Console.WriteLine("4. Exit");
-                Console.Write("Select an option: ");
+                Console.WriteLine("\n======================== Automaton Simulator =================================");
+                Console.WriteLine("\n=============== Written and Developed by: Ritvik Tiwari ======================");
+                Console.WriteLine("\n=========Copyright © 2024 Ritvik Tiwari. All rights reserved==================");
+                Console.WriteLine("\n1. Test DFA (Four A's followed by odd B's)");
+                Console.WriteLine("\n2. Test NFA (Strings either ending with 'ab' or starting with 'ab' and have at least 4 characters in it)");
+                Console.WriteLine("\n3. Test PDA (L = aab*aba*ab)");
+                Console.WriteLine("\n4. Exit");
+                Console.Write("\nSelect an option: ");
 
                 string choice = Console.ReadLine();
                 switch (choice)
