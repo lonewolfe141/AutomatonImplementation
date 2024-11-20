@@ -16,13 +16,8 @@ This project simulates three types of automata:
 - PDA: Simulates a PDA that accepts strings defined by the language **L = aab\*aba\*ab**.
 
 ## Requirements
-- .NET Core SDK (version 3.0 or higher)
-- A code editor like Visual Studio or Visual Studio Code
+No requirments to run the executable.
 
 ## How to Run
-1. Clone or download this repository to your local machine.
-2. Open the project in Visual Studio or compatible C# editor.
-3. Build and run the project using the following command:
+Just run the executable file.
 
-```bash
-dotnet run
