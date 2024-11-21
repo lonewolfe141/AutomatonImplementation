@@ -108,7 +108,6 @@ namespace AutomatonSimulator
         public bool Accepts(string input)
         {
             stack.Clear();
-            stack.Push('Z');
             currentState ="q0";
 
             foreach (char symbol in input)
@@ -116,62 +115,42 @@ namespace AutomatonSimulator
                 switch (currentState)
                 {
                     case "q0":
-                    if (symbol == 'a' && stack.Peek() == 'Z')
-                    { stack.Push('a'); }
-                    else if (symbol == 'a' && stack.Peek() == 'a')
-                    { currentState = "q1"; }
+                    if (symbol == 'a')
+                    {   stack.Push('Z');
+                        currentState = "q1"; 
+                    }
                     else
                     { return false; }
                     break;
 
                     case "q1":
-                    if (symbol == 'b')
-                    { currentState = "q1"; }
-                    else if (symbol == 'a')
-                    { currentState = "q2"; }
+                    if (symbol == 'a')
+                    { stack.Push('B'); }
+                    else if (symbol == 'b' && stack.Count > 0 && stack.Peek() == 'B')
+                    {
+                        stack.Pop();
+                        currentState = "q2";
+                    }
                     else
                     { return false; }
                     break;
 
                     case "q2":
-                    if (symbol == 'b')
-                    { currentState = "q3"; }
+                    if (symbol == 'b' && stack.Peek() == 'B' && stack.Count > 0)
+                    { stack.Pop(); }
+                    else if (stack.Count == 1 && stack.Peek() == 'Z')
+                    {
+                        currentState = "q3";
+                    }
                     else
                     { return false; }
                     break;
 
-                    case "q3":
-                    if (symbol == 'a')
-                    { currentState = "q4"; }
-                    else
-                    { return false; }
-                    break;
-
-                    case "q4":
-                    if(symbol == 'a')
-                    { currentState = "q4"; }
-                    else if(symbol == 'b')
-                    { currentState = "q5"; }
-                    else
-                    { return false; }
-                    break;
-
-                    case "q5":
-                    if(symbol == 'a')
-                    { currentState = "q6"; }
-                    else
-                    { return false; }
-                    break;
-                    
-                    case "q6":
-                    if (symbol == 'b')
-                    {return true; }
-                    else
-                    {return false;}
-                    break;
+                    default:
+                    return false;
                 }  //end switch
             }
-            return currentState == "q6";
+            return currentState == "q3" && stack.Peek() == 'Z' && stack.Count == 1;
         }
     }
 
@@ -186,7 +165,7 @@ namespace AutomatonSimulator
                 Console.WriteLine("\n=========Copyright © 2024 Ritvik Tiwari. All rights reserved==================");
                 Console.WriteLine("\n1. Test DFA (Four A's followed by odd B's)");
                 Console.WriteLine("\n2. Test NFA (Strings either ending with 'ab' or starting with 'ab' and have at least 4 characters in it)");
-                Console.WriteLine("\n3. Test PDA (L = aab*aba*ab)");
+                Console.WriteLine("\n3. Test PDA (L = aa^nb^n, n >= 1)");
                 Console.WriteLine("\n4. Exit");
                 Console.Write("\nSelect an option: ");
 
