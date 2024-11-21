@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutomatonSimulator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f3df29b1fdf15aded5d8c3cf0f9d92264b7b21e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ca661660ae949114096fc87c8a85e36b74b8efa")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutomatonSimulator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutomatonSimulator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

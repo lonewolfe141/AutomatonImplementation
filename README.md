@@ -16,7 +16,7 @@ This project simulates three types of automata:
 - PDA: Simulates a PDA that accepts strings defined by the language **L = aab\*aba\*ab**.
 
 ## Requirements
-Runs in Windows and OSx environments. No other installation required.
+Runs in Windows environment. No other installation required.
 However in order to view the source code you may need to install one of the following IDEs (Download links provided):
 Please select appropriate versions based on your operating systems.
 
@@ -35,9 +35,6 @@ Just run the executable file provided. You can also locate the file in this loca
 
 For Win x64:
 \Project\AutomatonImplementation\AutomatonSimulator\bin\Release\net8.0\win-x64\publish
-
-For OS x64:
-\Project\AutomatonImplementation\AutomatonSimulator\bin\Release\net8.0\osx-x64\publish
 
 ## Source Code Location
 Go to this location and open the C# Source Code file using VS Code or Notepad++ or Visual Studio.
