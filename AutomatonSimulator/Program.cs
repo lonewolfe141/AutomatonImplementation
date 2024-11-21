@@ -94,8 +94,7 @@ namespace AutomatonSimulator
             return false;
         }
     }
-
-    class PDA
+    public class PDA
     {
         private readonly Stack<char> stack;
         private string currentState;
@@ -109,6 +108,7 @@ namespace AutomatonSimulator
         public bool Accepts(string input)
         {
             stack.Clear();
+            stack.Push('Z');
             currentState ="q0";
 
             foreach (char symbol in input)
@@ -116,49 +116,62 @@ namespace AutomatonSimulator
                 switch (currentState)
                 {
                     case "q0":
-                    if (symbol == 'a' && (stack.Count == 0 || stack.Peek() == 'Z'))
+                    if (symbol == 'a' && stack.Peek() == 'Z')
                     { stack.Push('a'); }
                     else if (symbol == 'a' && stack.Peek() == 'a')
-                    { stack.Push('a'); }
-                    else if (symbol == 'b' && stack.Peek() == 'Z')
                     { currentState = "q1"; }
                     else
                     { return false; }
                     break;
 
                     case "q1":
-                    if (symbol == 'b' && stack.Peek() == 'Z')
+                    if (symbol == 'b')
+                    { currentState = "q1"; }
+                    else if (symbol == 'a')
                     { currentState = "q2"; }
-                    else if (symbol == 'a' && stack.Peek() == 'Z')
-                    { stack.Push('a');
-                    currentState = "q2"; }
                     else
                     { return false; }
                     break;
 
                     case "q2":
-                    if (symbol == 'a' && stack.Peek() == 'Z')
-                    { stack.Push('a'); }
-                    else if (symbol == 'b' && stack.Peek() == 'Z')
+                    if (symbol == 'b')
                     { currentState = "q3"; }
                     else
                     { return false; }
                     break;
 
                     case "q3":
-                    if (symbol == 'a' && stack.Peek() == 'Z')
-                    { stack.Push('a'); }
-                    else if (symbol == 'b' && stack.Peek() == 'Z')
-                    { stack.Pop(); }
+                    if (symbol == 'a')
+                    { currentState = "q4"; }
                     else
                     { return false; }
                     break;
 
-                    default:
-                        return false;
+                    case "q4":
+                    if(symbol == 'a')
+                    { currentState = "q4"; }
+                    else if(symbol == 'b')
+                    { currentState = "q5"; }
+                    else
+                    { return false; }
+                    break;
+
+                    case "q5":
+                    if(symbol == 'a')
+                    { currentState = "q6"; }
+                    else
+                    { return false; }
+                    break;
+                    
+                    case "q6":
+                    if (symbol == 'b')
+                    {return true; }
+                    else
+                    {return false;}
+                    break;
                 }  //end switch
             }
-            return currentState == "qf" && stack.Count == 0;
+            return currentState == "q6";
         }
     }
 
