@@ -17,11 +17,28 @@ This project simulates three types of automata:
 
 ## Requirements
 Runs in Windows and OSx environments. No other installation required.
+However in order to view the source code you may need to install one of the following IDEs (Download links provided):
+Please select appropriate versions based on your operating systems.
+
+1. VSCode (Supported by Wins x64/x86, OS x64/x86, Linux)
+https://code.visualstudio.com/download
+
+2. Notepad++ (Supported by Wins x64/x86, OS x64/x86, Linux)
+https://notepad-plus-plus.org/downloads/
+
+3. Visual Studio (Support for Mac OS ended August 31st, 2024) (Will only work on Windows x64/x86)
+https://visualstudio.microsoft.com/downloads/
+
 
 ## How to Run
 Just run the executable file provided. You can also locate the file in this location:
+
 For Win x64:
 \Project\AutomatonImplementation\AutomatonSimulator\bin\Release\net8.0\win-x64\publish
 
 For OS x64:
 \Project\AutomatonImplementation\AutomatonSimulator\bin\Release\net8.0\osx-x64\publish
+
+## Source Code Location
+Go to this location and open the C# Source Code file using VS Code or Notepad++ or Visual Studio.
+\Project\AutomatonImplementation\AutomatonSimulator
